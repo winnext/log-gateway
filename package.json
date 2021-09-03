@@ -4,7 +4,8 @@
   "description": "Sonarqube Scan - Test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "run":  "tsc && node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
   },
   "homepage": "https://github.com/winnext/boilerplate#readme",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.1",
-    "@types/node": "^16.6.2",
+    "@types/node": "^16.7.10",
+    "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.2",
     "eslint": "^7.32.0",
@@ -29,14 +32,19 @@
     "eslint-plugin-sonarjs": "^0.10.0",
     "eslint-plugin-tsdoc": "^0.2.14",
     "jest": "^27.0.6",
+    "jest-junit": "^12.2.0",
     "node-ts": "^5.1.2",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
-    "jest-junit": "^12.2.0",
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "typeorm": "^0.2.37"
+    "redis": "^3.1.2",
+    "typeorm": "^0.2.37",
+    "winston": "^3.3.3",
+    "winston-redis": "^3.1.0"
   }
 }
