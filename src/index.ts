@@ -6,6 +6,8 @@ import router from './api/log/log.route';
 dotenv.config();
 
 const app = express();
+app.disable('x-powered-by');
+
 app.use(express.json());
 app.use(router);
 
