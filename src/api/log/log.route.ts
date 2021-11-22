@@ -5,6 +5,6 @@ import LogController from './log.controller';
 const log = new LogController();
 const router = Router();
 
-router.post('/', log.saveToLog);
+router.post('/log', log.saveToLog);
 
 export default router;
